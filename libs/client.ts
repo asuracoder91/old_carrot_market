@@ -1,3 +1,10 @@
 import { PrismaClient } from "@prisma/client";
 
-export default new PrismaClient();
+const client = new PrismaClient();
+
+client.user.create({
+	data: {
+		email: "einrede@gmail.com",
+		name: "Rok",
+	},
+});
